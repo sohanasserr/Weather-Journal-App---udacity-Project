@@ -23,10 +23,12 @@ app.use(express.static("website"));
 
 //get the info for Temp, Date, and content
 app.get("/getWeatherData", (req, res) => {
+	console.log(projectData);
 	res.send(projectData);
 });
 app.post("/saveWeatherData", (req, res) => {
 	projectData = { ...req.body };
+	console.log(projectData);
 	res.send(projectData);
 });
 
